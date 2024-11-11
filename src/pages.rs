@@ -367,14 +367,14 @@ fn create_fixes_section(builder: &Builder) -> gtk::Box {
     rankmirrors_btn.connect_clicked(move |_| {
         // Spawn child process in separate thread.
         std::thread::spawn(move || {
-            let _ = utils::run_cmd_terminal(String::from("cachyos-rate-mirrors"), true);
+            let _ = utils::run_cmd_terminal(String::from("gnoppix-rate-mirrors"), true);
         });
     });
     install_gaming_btn.connect_clicked(move |_| {
         let dialog_tx_gaming = dialog_tx_gaming.clone();
         // Spawn child process in separate thread.
         std::thread::spawn(move || {
-            const alpm_package_name: &str = "cachyos-gaming-meta";
+            const alpm_package_name: &str = "gnoppix-gaming-meta";
             if !utils::is_alpm_pkg_installed(alpm_package_name) {
                 let _ = utils::run_cmd_terminal(format!("pacman -S {alpm_package_name}"), true);
             } else {
@@ -392,7 +392,7 @@ fn create_fixes_section(builder: &Builder) -> gtk::Box {
         let dialog_tx_gaming = dialog_tx_snapper.clone();
         // Spawn child process in separate thread.
         std::thread::spawn(move || {
-            const alpm_package_name: &str = "cachyos-snapper-support";
+            const alpm_package_name: &str = "gnoppix-snapper-support";
             if !utils::is_alpm_pkg_installed(alpm_package_name) {
                 let _ = utils::run_cmd_terminal(format!("pacman -S {alpm_package_name}"), true);
             } else {
@@ -546,16 +546,16 @@ fn create_apps_section() -> Option<gtk::Box> {
     label.set_text(&fl!("applications"));
 
     // Check first btn.
-    if Path::new("/sbin/cachyos-pi").exists() {
-        let cachyos_pi = gtk::Button::with_label("Gnoppix PackageInstaller");
-        cachyos_pi.connect_clicked(on_appbtn_clicked);
-        box_collection.pack_start(&cachyos_pi, true, true, 2);
+    if Path::new("/sbin/gnoppix-pi").exists() {
+        let gnoppix_pi = gtk::Button::with_label("Gnoppix PackageInstaller");
+        gnoppix_pi.connect_clicked(on_appbtn_clicked);
+        box_collection.pack_start(&gnoppix_pi, true, true, 2);
     }
     // Check second btn.
-    if Path::new("/sbin/cachyos-kernel-manager").exists() {
-        let cachyos_km = gtk::Button::with_label("Gnoppix Kernel Manager");
-        cachyos_km.connect_clicked(on_appbtn_clicked);
-        box_collection.pack_start(&cachyos_km, true, true, 2);
+    if Path::new("/sbin/gnoppix-kernel-manager").exists() {
+        let gnoppix_km = gtk::Button::with_label("Gnoppix Kernel Manager");
+        gnoppix_km.connect_clicked(on_appbtn_clicked);
+        box_collection.pack_start(&gnoppix_km, true, true, 2);
     }
 
     topbox.pack_start(&label, true, true, 5);
@@ -1064,9 +1064,9 @@ fn on_appbtn_clicked(button: &gtk::Button) {
     // Get button label.
     let name = button.label().unwrap();
     let binname = if name == "Gnoppix PackageInstaller" {
-        "cachyos-pi"
+        "gnoppix-pi"
     } else if name == "Gnoppix Kernel Manager" {
-        "cachyos-kernel-manager"
+        "gnoppix-kernel-manager"
     } else {
         ""
     };
