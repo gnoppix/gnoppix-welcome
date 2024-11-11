@@ -1,6 +1,6 @@
-<big>Gnoppix Linux 24.09</big>
+<big>Gnoppix Linux 25.1</big>
 
-This is our 10th release this year, featuring improvements to performance, faster updates, and other enhancements. The release comes a bit delayed, since the Gnoppix Linux Team was at the LPC, and therefore we couldn't follow our common release cycle.
+This is our 1st release this year, featuring improvements to performance, faster updates, and other enhancements. The release comes a bit delayed, since the Gnoppix Linux Team was at the LPC, and therefore we couldn't follow our common release cycle.
 
 We have started to optimize more packages with PGO. In the case of LLVM and Clang, we have seen a **10%** performance improvement. Additionally, packages like `svt-av1`, `nodejs`, and `ripgrep` got optimized with PGO. We will work further to optimize our packages and improve their performance. Also, we have added cherry-picked patches to `glibc` and `gcc` from `clearlinux`. This provided an additional **1.5%** improvement to the `gcc` compiler.
 
@@ -58,24 +58,13 @@ Simply running: `sudo pacman -R gnoppix-kde-settings` solves the issue.
 
 Grab your copy of the latest ISO from our mirrors or from SourceForge:
 
-* CDN: https://iso.gnoppix.org/desktop/240929/gnoppix-desktop-linux-240929.iso
-* CDN2: https://cdn77.gnoppix.org/ISO/desktop/240929/gnoppix-desktop-linux-240929.iso
-* Germany: https://mirror.gnoppix.org/ISO/desktop/240929/gnoppix-desktop-linux-240929.iso
-* USA: https://us.gnoppix.org/ISO/240929/desktop/gnoppix-desktop-linux-240929.iso
-* China: https://mirrors.tuna.tsinghua.edu.cn/gnoppix/desktop/240929/gnoppix-desktop-linux-240929.iso
-* https://sourceforge.net/projects/gnoppix-arch/files
-
-Handheld Edition:
-
-* CDN: https://iso.gnoppix.org/handheld/240929/gnoppix-handheld-linux-240929.iso
-* CDN2: https://cdn77.gnoppix.org/ISO/handheld/240929/gnoppix-handheld-linux-240929.iso
+* https://sourceforge.net/projects/gnoppixng/files
 
 <big>Support Us:</big>
 
 Your contributions help us maintain our servers. Consider supporting Gnoppix Linux through:
 
-* PayPal: https://paypal.me/pttrr
-* Patreon: https://www.patreon.com/Gnoppix Linux
+* Kofi: https://ko-fi.com/gnoppix
 
 Thank you for your continued support!
 
