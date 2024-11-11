@@ -3,7 +3,7 @@ name = "gnoppix-hello"
 version = "0.15.3"
 authors = ["Andreas Mueller <gnoppix@gnoppix.org>"]
 license = "GPLv3"
-edition = "2024"
+edition = "2018"
 
 [dependencies]
 alpm = { default-features = false, version = "4" }
