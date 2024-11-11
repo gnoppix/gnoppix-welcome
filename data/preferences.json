@@ -1,0 +1,19 @@
+{
+    "default_locale": "en",
+    "autostart_path": "~/.config/autostart/gnoppix-hello.desktop",
+    "data_path": "/usr/share/gnoppix-hello/data/",
+    "desktop_path": "/usr/share/applications/gnoppix-hello.desktop",
+    "installer_path": "/usr/bin/calamares",
+    "live_path": "/run/archiso",
+    "logo_path": "/usr/share/icons/hicolor/scalable/apps/",
+    "save_path": "~/.config/gnoppix-hello.json",
+    "urls": {
+        "development": "https://github.com/gnoppix",
+        "software": "https://github.com/gnoppix",
+        "donate": "https://www.patreon.com/gnoppix",
+        "forum": "https://gnoppix.org",
+        "discord": "https://discord.com/invite/tmHjQmgBW9",
+        "twitter": "https://twitter.com/gnoppixlinux",
+        "wiki": "https://docs.gnoppix.com"
+    }
+}
