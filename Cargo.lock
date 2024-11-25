@@ -243,31 +243,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9ac0150caa2ae65ca5bd83f25c7de183dea78d4d366469f148435e2acfbad0da"
 
 [[package]]
-name = "cachyos-hello"
-version = "0.15.2"
-dependencies = [
- "alpm",
- "alpm-utils",
- "anyhow",
- "chwd",
- "gdk-pixbuf 0.20.4",
- "gio 0.20.5",
- "glib 0.20.5",
- "gtk",
- "i18n-embed",
- "i18n-embed-fl",
- "once_cell",
- "pacmanconf",
- "phf",
- "reqwest",
- "rust-embed",
- "serde",
- "serde_json",
- "subprocess",
- "unic-langid",
-]
-
-[[package]]
 name = "cairo-rs"
 version = "0.18.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1020,6 +995,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "gnoppix-hello"
+version = "0.15.3"
+dependencies = [
+ "alpm",
+ "alpm-utils",
+ "anyhow",
+ "chwd",
+ "gdk-pixbuf 0.20.4",
+ "gio 0.20.5",
+ "glib 0.20.5",
+ "gtk",
+ "i18n-embed",
+ "i18n-embed-fl",
+ "once_cell",
+ "pacmanconf",
+ "phf",
+ "reqwest",
+ "rust-embed",
+ "serde",
+ "serde_json",
+ "subprocess",
+ "unic-langid",
+]
+
+[[package]]
 name = "gobject-sys"
 version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1547,7 +1547,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4979f22fdb869068da03c9f7528f8297c6fd2606bc3a4affe42e6a823fdb8da4"
 dependencies = [
  "cfg-if",
- "windows-targets 0.52.6",
+ "windows-targets 0.48.5",
 ]
 
 [[package]]
@@ -2192,9 +2192,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.23.16"
+version = "0.23.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eee87ff5d9b36712a58574e12e9f0ea80f915a5b0ac518d322b24a465617925e"
+checksum = "9c9cc1d47e243d655ace55ed38201c19ae02c148ae56412ab8750e8f0166ab7f"
 dependencies = [
  "once_cell",
  "rustls-pki-types",
