@@ -1,8 +1,8 @@
-# Maintainer: Vladislav Nepogodin <nepogodin.vlad@gmail.com>
+# Maintainer: Andreas Mueller amu@gnoppix.com>
 
 pkgname=gnoppix-hello
-_pkgname=Gnoppix-Welcome
-pkgver=0.15.2
+_pkgname=gnoppix-welcome
+pkgver=0.1.0
 pkgrel=1
 pkgdesc='Welcome screen for Gnoppix Linux'
 arch=('x86_64')
@@ -26,7 +26,7 @@ makedepends=(
   meson
 )
 source=("${pkgname}-${pkgver}.tar.gz::$url/archive/v$pkgver.tar.gz")
-sha512sums=('4cad528290770a541822ab8f76ba219a613b96b9c51baaceaaa9c8fa0db278e19ca302ba46bfc7b2dbac57f87e97a23996dcfc4689ad59f234ee3a190ab76ade')
+sha512sums=('b9d3727536c258d8f60303d7191eb81d4536a424e6ae57b128b5995b5c726f2828b224b4eb5789e4b2392b984dc7877c74f608ad13a25b49537057e6c5d2bb52')
 provides=('gnoppix-hello')
 conflicts=('gnoppix-hello')
 options=(strip)

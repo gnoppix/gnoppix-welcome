@@ -54,6 +54,7 @@ fn outdated_version_check(message: String) {
     let version_tag: String =
         fs::read_to_string("/etc/version-tag").unwrap_or("testing".into()).trim().into();
 
+
     let window_ref = unsafe { &G_HELLO_WINDOW.as_ref().unwrap().window };
 
     if version_tag.contains("testing") {
@@ -65,7 +66,17 @@ fn outdated_version_check(message: String) {
         );
     }
 
-    let versions = reqwest::blocking::get("https://gnoppix.org/versions.json")
+
+    let response = reqwest::blocking::get("https://cachyos.org/versions.json");
+    if response.is_err() {
+        return show_simple_dialog(
+            window_ref,
+            gtk::MessageType::Warning,
+            &fl!("offline-error"),
+            message.clone(),
+        );
+    }
+    let versions = response
         .unwrap()
         .json::<Versions>()
         .unwrap();
@@ -74,9 +85,7 @@ fn outdated_version_check(message: String) {
         versions.desktop_iso_version
     } else {
         versions.handheld_iso_version
-    }
-    .trim()
-    .to_owned();
+    };
 
     if version_tag != latest_version {
         show_simple_dialog(
@@ -84,7 +93,9 @@ fn outdated_version_check(message: String) {
             gtk::MessageType::Warning,
             &fl!("outdated-version-warning"),
             message.clone(),
-        );
+    }
+    .trim()
+    .to_owned(); 
     }
 }
 
@@ -157,7 +168,7 @@ fn show_about_dialog() {
         ])
         // Translators: Replace "translator-credits" with your names. Put a comma between.
         .translator_credits("translator-credits")
-        .copyright("2021-2024 Gnoppix team")
+        .copyright("2002-2025 Gnoppix Linux")
         .license_type(gtk::License::Gpl30)
         .website("https://github.com/gnoppix/gnoppix-welcome")
         .website_label("GitHub")
@@ -270,7 +281,7 @@ fn build_ui(application: &gtk::Application) {
     // Subtitle of headerbar
     let header: HeaderBar = builder.object("headerbar").expect("Could not get the headerbar");
 
-    header.set_subtitle(Some("Gnoppix rolling"));
+    header.set_subtitle(Some("Gnoppix Welcome"));
 
     // Load images
     let logo_path = format!("{}/{}.svg", preferences["logo_path"].as_str().unwrap(), APP_ID);
