@@ -13,8 +13,8 @@ fn main() {
     let out_dir = env::var("OUT_DIR").unwrap();
 
     let status = Command::new("glib-compile-resources")
-        .arg(format!("--target={}/cachyos-welcome.gresource", out_dir))
-        .arg("cachyos-welcome.gresource.xml")
+        .arg(format!("--target={}/gnoppix-welcome.gresource", out_dir))
+        .arg("gnoppix-welcome.gresource.xml")
         .status()
         .unwrap();
 
@@ -29,7 +29,7 @@ fn main() {
 }
 
 fn gen_config() -> anyhow::Result<()> {
-    let base_id = "org.cachyos.hello";
+    let base_id = "org.gnoppix.hello";
 
     let version = env::var("CARGO_PKG_VERSION")?;
 

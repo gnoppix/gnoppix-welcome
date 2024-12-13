@@ -1,10 +1,10 @@
-# Maintainer: Andreas Mueller amu@gnoppix.com>
+# Maintainer: Vladislav Nepogodin <nepogodin.vlad@gmail.com>
 
 pkgname=gnoppix-hello
 _pkgname=gnoppix-welcome
-pkgver=0.1.0
+pkgver=0.15.4
 pkgrel=1
-pkgdesc='Welcome screen for Gnoppix Linux'
+pkgdesc='Welcome screen for Gnoppix'
 arch=('x86_64')
 groups=('gnoppix')
 license=(GPL-3.0-or-later)
@@ -26,7 +26,7 @@ makedepends=(
   meson
 )
 source=("${pkgname}-${pkgver}.tar.gz::$url/archive/v$pkgver.tar.gz")
-sha512sums=('b9d3727536c258d8f60303d7191eb81d4536a424e6ae57b128b5995b5c726f2828b224b4eb5789e4b2392b984dc7877c74f608ad13a25b49537057e6c5d2bb52')
+sha512sums=('359a7681e64f01ec9d6bfd9269a0e9eeca6e50dfb0f988d153745388f4d10c64ca3c74ff908fb52044db374618edbc8976a5361a2c82d7af7586a405776cef30')
 provides=('gnoppix-hello')
 conflicts=('gnoppix-hello')
 options=(strip)
@@ -65,3 +65,4 @@ package() {
 }
 
 # vim:set sw=2 sts=2 et:
+

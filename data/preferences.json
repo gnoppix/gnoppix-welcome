@@ -10,10 +10,11 @@
     "urls": {
         "development": "https://github.com/gnoppix",
         "software": "https://github.com/gnoppix",
-        "donate": "https://www.patreon.com/gnoppix",
-        "forum": "https://gnoppix.org",
+        "donate": "https://ko-fi.com/gnoppix",
+        "forum": "https://wiki.gnoppix.org",
+        "telegram": "https://t.me/+oR-kWT47vRdmMDli",
         "discord": "https://discord.com/invite/tmHjQmgBW9",
         "twitter": "https://twitter.com/gnoppixlinux",
-        "wiki": "https://docs.gnoppix.com"
+        "wiki": "https://wiki.gnoppix.org"
     }
 }

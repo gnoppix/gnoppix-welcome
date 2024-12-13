@@ -1,6 +1,6 @@
 # About dialog
-about-dialog-title = Gnoppix Hello
-about-dialog-comments = Welcome screen for Gnoppix
+about-dialog-title = Gnoppix Welcome 
+about-dialog-comments = Welcome screen for Gnoppix 
 
 # Tweaks page
 tweaks = Tweaks
@@ -12,7 +12,7 @@ orphans-not-found = No orphan packages found!
 package-not-installed = Package '{$package_name}' has not been installed!
 gaming-package-installed = Gaming packages already installed!
 spoof-dpi-package-installed = SpoofDPI is already installed!
-snapper-package-installed = 'cachyos-snapper-support' package already installed!
+snapper-package-installed = 'gnoppix-snapper-support' package already installed!
 
 # Application Browser page
 advanced-btn = advanced

@@ -1,6 +1,6 @@
-<big>Gnoppix Linux 24.09</big>
+<big>Gnoppix 24.09</big>
 
-This is our 10th release this year, featuring improvements to performance, faster updates, and other enhancements. The release comes a bit delayed, since the Gnoppix Linux Team was at the LPC, and therefore we couldn't follow our common release cycle.
+This is our 10th release this year, featuring improvements to performance, faster updates, and other enhancements. The release comes a bit delayed, since the Gnoppix Team was at the LPC, and therefore we couldn't follow our common release cycle.
 
 We have started to optimize more packages with PGO. In the case of LLVM and Clang, we have seen a **10%** performance improvement. Additionally, packages like `svt-av1`, `nodejs`, and `ripgrep` got optimized with PGO. We will work further to optimize our packages and improve their performance. Also, we have added cherry-picked patches to `glibc` and `gcc` from `clearlinux`. This provided an additional **1.5%** improvement to the `gcc` compiler.
 
@@ -9,10 +9,10 @@ The repository sync is now happening more often, which means there will be even 
 The `gnoppix-kde-settings` package now installs an sddm config, which enables Wayland by default for sddm. This has the benefit that refresh rates, resolution, and other settings can be applied to it, providing a better experience.
 GPUs that do not support Wayland (legacy NVIDIA) need to manually remove this config. We may introduce hardware detection integration for this in the future, but this has not been done yet.
 
-In `gnoppix-settings`, we have added changes to the handling of NetworkManager. NetworkManager will now use systemd-resolved as the backend, which helps fix issues with download speed in Steam due to its massive DNS requests. Enabling DNS caching massively improves that. Also, we are now adding an NTP Server for systemd-timesyncd, which will default to time.google.com. There have been increased reports in Arch Linux, as well as Gnoppix Linux, that the timeservers provided as default are not working correctly. The previously used timeservers will still be used as fallbacks.
-The Gnoppix Linux Hardware Detection (chwd) simplified the device handling, and all profiles are now specifically designed for PCI devices.
+In `gnoppix-settings`, we have added changes to the handling of NetworkManager. NetworkManager will now use systemd-resolved as the backend, which helps fix issues with download speed in Steam due to its massive DNS requests. Enabling DNS caching massively improves that. Also, we are now adding an NTP Server for systemd-timesyncd, which will default to time.google.com. There have been increased reports in Arch Linux, as well as Gnoppix, that the timeservers provided as default are not working correctly. The previously used timeservers will still be used as fallbacks.
+The Gnoppix Hardware Detection (chwd) simplified the device handling, and all profiles are now specifically designed for PCI devices.
 
-In terms of fixes, we have added to the "Launch Installer" fixes to sync the time to the hardware clock. There have been some reports that the installation failed since the time was "backwards". Calamares now correctly unmounts the root filesystem after the installation. Core dumps have been enabled in Gnoppix Linux again to have easier debugging, and core dumps get cleared every 3 days to avoid an increase in used storage.
+In terms of fixes, we have added to the "Launch Installer" fixes to sync the time to the hardware clock. There have been some reports that the installation failed since the time was "backwards". Calamares now correctly unmounts the root filesystem after the installation. Core dumps have been enabled in Gnoppix again to have easier debugging, and core dumps get cleared every 3 days to avoid an increase in used storage.
 
 Together with this release the **old ISO** will **not work** anymore, due the changes in the hardware detection.
 
@@ -72,11 +72,11 @@ Handheld Edition:
 
 <big>Support Us:</big>
 
-Your contributions help us maintain our servers. Consider supporting Gnoppix Linux through:
+Your contributions help us maintain our servers. Consider supporting Gnoppix through:
 
 * PayPal: https://paypal.me/pttrr
-* Patreon: https://www.patreon.com/Gnoppix Linux
+* Patreon: https://www.patreon.com/Gnoppix
 
 Thank you for your continued support!
 
-<b>The Gnoppix Linux Team</b>
+<b>The Gnoppix Team</b>
